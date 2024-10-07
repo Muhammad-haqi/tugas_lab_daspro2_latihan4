@@ -1,0 +1,55 @@
+program soal6;
+uses crt;
+var 
+    pilihan:string;
+    kode, tambahan, pesan, bill, i: longint;
+    total, Harga: longint;
+
+begin 
+    clrscr;
+    writeln('Mau minum apa? ');
+    writeln('1. Teh tawar ');
+    writeln('2. chocolatos hot ');
+    writeln('3. Bublegum drink');
+    writeln('4. lemon panas');
+    writeln('5. Cappucino cincau');
+    writeln('6. Coffee Latte');
+    writeln('7. Milkshake coklat');
+    writeln('8. Jus Mangga');
+    writeln('9. Jus Alpukat');
+    writeln('10. Jus Apel');
+repeat
+    begin
+        total:=0;
+        write('Masukkan kode minuman : ');
+        readln(kode);
+        write('Mau pesan berapa : ');
+        readln(tambahan);
+        write('Apakah ada tambahan : ');
+        readln(pilihan);
+        case (kode) of
+        1 : Harga := 5000;
+        2 : Harga := 15000;
+        3 : Harga := 15000;
+        4 : Harga := 15000;
+        5 : Harga := 15000;
+        6 : Harga := 20000;
+        7 : Harga := 20000;
+        8 : Harga := 10000;
+        9 : Harga := 10000;
+        10 : Harga := 10000;
+        else
+            write('ERROR!');
+        end;
+        total:= bill + Harga*tambahan;
+        bill := total
+    end;
+until (pilihan='tidak');
+    begin
+    writeln;
+    writeln('Harap menunggu pesanan');
+    end;
+    writeln;
+    writeln('harga pesananmu adalah Rp' ,total);
+readln;
+end.
