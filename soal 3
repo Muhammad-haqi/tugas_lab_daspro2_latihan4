@@ -1,0 +1,43 @@
+program soal3;
+uses crt;
+
+var l, m, n, spasi: integer;
+
+begin
+  clrscr;
+
+  write('Masukkan jumlah baris segitiga : ');
+  readln(n);
+
+    for l := 1 to n do
+    begin
+        spasi := n - l;
+
+        for m := 1 to spasi do
+        begin
+          write(' ');
+        end;
+        for m := 1 to (2*l-1) do
+        begin
+            write('*')
+        end;
+    writeln;
+    end;
+
+    for l := (n-1) downto 1 do
+    begin
+        spasi := n - l;
+
+        for m := 1 to spasi do
+        begin
+          write(' ');
+        end;
+        for m := (2*l-1) downto 1 do
+        begin
+            write('*')
+        end;
+    writeln;
+    end;
+
+readln;
+end.
